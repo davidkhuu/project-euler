@@ -19,3 +19,28 @@ function fibonacci(num) {
     return fibonacci(num-1) + fibonacci(num-2);
   }
 }
+
+// Returns the sum of the even-valued terms up to num
+function sumOfEvenFibs(num) {
+  var sum = 0;
+  var i = 1;
+  var curr = 0;
+
+  // Loop until the next Fibonacci number is higher than num
+  while (true) {
+    var fib = fibonacci(i);
+    if (fib > num) {
+      break;
+    } else {
+      // If the number is even, add it to the current running sum
+      if (fib % 2 == 0) {
+        sum += fib;
+      }
+      i++;
+    }
+  }
+
+  return sum;
+}
+
+sumOfEvenFibs(4000000);
