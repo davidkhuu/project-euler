@@ -9,11 +9,11 @@
 // Author:  David Khuu
 // Date:    May 20, 2016
 
-// Returns the num-th term of the Fibonacci sequence
+// Returns the num-th term of the Fibonacci sequence (based on Project Euler's example of the Fibonacci sequence)
 function fibonacci(num) {
-  if (num == 1) {
+  if (num == 0) {
     return 1;
-  } else if (num == 2) {
+  } else if (num == 1) {
     return 2;
   } else {
     return fibonacci(num-1) + fibonacci(num-2);
